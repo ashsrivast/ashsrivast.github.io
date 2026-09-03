@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashish Srivastava</title>
+<meta name="description" content="Ashish Srivastava — Software engineering leader.">
+<style>
+  :root{
+    --bg:#0b0d12;
+    --text:#e8eaf0;
+    --text-dim:#9aa2b4;
+    --border:#232838;
+    --accent:#6ee7c2;
+    --accent-2:#7aa2ff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding:24px;
+  }
+  main{
+    max-width:520px;
+    text-align:center;
+  }
+  h1{
+    font-size:clamp(26px,5vw,34px);
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin:0 0 18px;
+  }
+  p{
+    color:var(--text-dim);
+    font-size:16px;
+    margin:0 0 28px;
+  }
+  .skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:32px;
+  }
+  .skills span{
+    font-size:13px;
+    font-weight:600;
+    color:var(--accent);
+    background:rgba(110,231,194,0.12);
+    padding:5px 12px;
+    border-radius:999px;
+  }
+  .contact a{
+    color:var(--text);
+    font-size:14.5px;
+    font-weight:600;
+    text-decoration:none;
+    border:1px solid var(--border);
+    padding:9px 18px;
+    border-radius:999px;
+    display:inline-block;
+    margin:4px;
+  }
+  .contact a:hover{
+    border-color:var(--accent-2);
+    color:var(--accent-2);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ashish Srivastava</h1>
+  <p>
+    Software engineering leader with 20+ years of experience across enterprise
+    platforms, distributed systems, and — more recently — agentic AI and data
+    science. IIT Kanpur alum, currently continuing my education in data science
+    and AI.
+  </p>
+  <div class="skills">
+    <span>Engineering Leadership</span>
+    <span>Distributed Systems</span>
+    <span>Agentic AI</span>
+    <span>AI/ML Systems</span>
+    <span>Cloud &amp; DevOps</span>
+  </div>
+  <div class="contact">
+    <a href="mailto:iitk.ashish.srivastava@gmail.com">Email</a>
+    <a href="https://github.com/ashish-srivastava1" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</main>
+</body>
+</html>

@@ -24,16 +24,15 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
-    padding:72px 24px;
   }
-  main{
-    max-width:560px;
+  .wrap{
+    max-width:1120px;
     margin:0 auto;
-    text-align:left;
+    padding:72px 24px 96px;
     animation:fadeIn 0.5s ease-out;
   }
   h1{
-    font-size:clamp(26px,5vw,34px);
+    font-size:clamp(26px,3vw,38px);
     font-weight:700;
     letter-spacing:-0.02em;
     margin:0 0 16px;
@@ -46,6 +45,7 @@
     color:var(--text-dim);
     font-size:16px;
     margin:0 0 24px;
+    max-width:640px;
   }
   .skills{
     display:flex;
@@ -67,7 +67,7 @@
     background:rgba(110,231,194,0.2);
   }
   .contact{
-    margin-bottom:48px;
+    margin-bottom:40px;
   }
   .contact a{
     color:var(--text);
@@ -78,11 +78,20 @@
     padding:9px 18px;
     border-radius:999px;
     display:inline-block;
-    margin:0 8px 0 0;
+    margin:0 8px 8px 0;
   }
   .contact a:hover{
     border-color:var(--accent-2);
     color:var(--accent-2);
+  }
+  .tagline{
+    font-size:14.5px;
+    font-style:italic;
+    color:var(--text-dim);
+    border-left:2px solid var(--border);
+    padding-left:16px;
+    max-width:280px;
+    line-height:1.65;
   }
   .projects h2{
     font-size:13px;
@@ -96,7 +105,7 @@
     background:#12151c;
     border:1px solid var(--border);
     border-radius:12px;
-    padding:18px 20px;
+    padding:22px 26px;
   }
   .project-card h3{
     font-size:16px;
@@ -111,6 +120,7 @@
   .project-card p{
     font-size:14px;
     margin:0 0 12px;
+    max-width:680px;
   }
   .project-card a.project-link{
     font-size:13px;
@@ -131,28 +141,54 @@
     padding:3px 10px;
     border-radius:999px;
   }
+
+  /* Desktop: two-column layout with a sticky intro sidebar so the page
+     uses the available width instead of floating a narrow mobile-width
+     column in the middle of the screen. */
+  @media (min-width: 900px){
+    .wrap{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:72px;
+      align-items:start;
+      padding-top:96px;
+    }
+    .intro{
+      position:sticky;
+      top:72px;
+    }
+    .project-card + .project-card{
+      margin-top:20px !important;
+    }
+  }
 </style>
 </head>
 <body>
-<main>
-  <h1>Ashish Srivastava</h1>
-  <p>
-    Software engineering leader with 20+ years of experience across enterprise
-    platforms, distributed systems, and — more recently — agentic AI and data
-    science. IIT Kanpur alum, currently continuing my education in data science
-    and AI.
-  </p>
-  <div class="skills">
-    <span>Engineering Leadership</span>
-    <span>Distributed Systems</span>
-    <span>Agentic AI</span>
-    <span>AI/ML Systems</span>
-    <span>Cloud &amp; DevOps</span>
-  </div>
-  <div class="contact">
-    <a href="mailto:iitk.ashish.srivastava@gmail.com">Email</a>
-    <a href="https://github.com/ashsrivast" target="_blank" rel="noopener">GitHub</a>
-  </div>
+<div class="wrap">
+  <header class="intro">
+    <h1>Ashish Srivastava</h1>
+    <p>
+      Software engineering leader with 20+ years of experience across enterprise
+      platforms, distributed systems, and — more recently — agentic AI and data
+      science. IIT Kanpur alum, currently continuing my education in data science
+      and AI.
+    </p>
+    <div class="skills">
+      <span>Engineering Leadership</span>
+      <span>Distributed Systems</span>
+      <span>Agentic AI</span>
+      <span>AI/ML Systems</span>
+      <span>Cloud &amp; DevOps</span>
+    </div>
+    <div class="contact">
+      <a href="mailto:iitk.ashish.srivastava@gmail.com">Email</a>
+      <a href="https://github.com/ashsrivast" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="tagline">
+      “I like systems where the contract is clear — a well-defined API, a written
+      spec — because that’s what lets a team, or an agent, build with confidence.”
+    </p>
+  </header>
 
   <section class="projects">
     <h2>Personal Projects</h2>
@@ -230,6 +266,6 @@
       <a class="project-link" href="https://examprep-fd5661.firebaseapp.com/" target="_blank" rel="noopener">View project →</a>
     </div>
   </section>
-</main>
+</div>
 </body>
 </html>

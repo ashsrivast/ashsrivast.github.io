@@ -166,19 +166,55 @@
         <span>API Contract-Driven</span>
       </div>
       <p>
-        A restaurant waitlist manager built end-to-end through an AI-native
-        development workflow, not hand-written code. I started with nothing
-        more than a vague idea — "something to manage restaurant waitlists" —
-        and a planning agent turned that into a real spec by asking me
-        questions: who the users are, what a v1 should and shouldn't do, what
-        the data model looks like. That back-and-forth became the written
-        product spec and an AGENTS.md of working conventions, which a coding
-        agent then executed against: a React frontend built against a mocked
-        API, then a test-first FastAPI + SQLite backend built to that same
-        OpenAPI contract. Integration and the swap to a live database came
-        last — and touched just one file, since the contract never changed.
-        The idea shaped the spec, the spec shaped the contract, and the agent
-        built to the contract.
+        <strong>TableTurn is a restaurant waitlist manager built end-to-end using an
+        AI-native software development workflow — with agents driving the journey from
+        idea to working application.</strong>
+      </p>
+      <p>
+        The project started with nothing more than a vague idea:
+        <em>“something to manage restaurant waitlists.”</em> A planning agent turned
+        that idea into a concrete product specification through an iterative
+        conversation — clarifying who the users are, defining what the V1 should and
+        should not do, and designing the underlying data model.
+      </p>
+      <p>
+        That conversation produced two important artifacts: a
+        <strong>written product specification</strong> and an
+        <strong>AGENTS.md</strong> defining the project’s engineering conventions and
+        development workflow.
+      </p>
+      <p>
+        A coding agent then implemented the application against those specifications.
+        The React frontend was developed first against a <strong>mocked API</strong>,
+        allowing the user experience to evolve independently of the backend. In
+        parallel, the API design was captured as an <strong>OpenAPI specification</strong>,
+        defining how the frontend and backend would communicate.
+      </p>
+      <p>
+        Next, a <strong>test-first FastAPI + SQLite backend</strong> was built against
+        the same OpenAPI specification. This specification served as the shared
+        contract between the frontend and backend, allowing both sides to be developed
+        independently while maintaining a consistent interface.
+      </p>
+      <p>
+        Once both the frontend and backend were working independently, they were
+        integrated and the persistence layer was switched to a live database. Because
+        the API design remained unchanged, the database change was isolated to a single
+        file rather than requiring changes throughout the application.
+      </p>
+      <p>The result demonstrates a different way of building software:</p>
+      <p>
+        <strong>Idea → Product Specification → API Design → Implementation → Integration</strong>
+      </p>
+      <p>
+        Instead of AI simply generating code, the project uses AI agents as
+        participants in a structured engineering workflow — with specifications, API
+        definitions, tests, and engineering conventions providing the guardrails.
+      </p>
+      <p>
+        <strong>The idea shaped the product specification. The specification shaped the
+        API design. The API design guided the implementation. And the agents built to
+        it.</strong>
       </p>
       <a class="project-link" href="https://ai-dev-tools-zoomcamp.vercel.app/" target="_blank" rel="noopener">Live demo →</a>
       <a class="project-link" style="margin-left:14px;" href="https://github.com/ashish-srivastava1/ai-dev-tools-zoomcamp/tree/main/Homework-02-development" target="_blank" rel="noopener">Source →</a>

@@ -142,6 +142,35 @@
     border-radius:999px;
   }
 
+  .writing{
+    margin-top:48px;
+  }
+  .article-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .article-list li + li{
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid var(--border);
+  }
+  .article-list a{
+    font-size:15px;
+    font-weight:600;
+    color:var(--text);
+    text-decoration:none;
+  }
+  .article-list a:hover{
+    color:var(--accent-2);
+  }
+  .article-list .article-meta{
+    display:block;
+    font-size:12.5px;
+    color:var(--text-dim);
+    margin-top:2px;
+  }
+
   /* Desktop: two-column layout with a sticky intro sidebar so the page
      uses the available width instead of floating a narrow mobile-width
      column in the middle of the screen. */
@@ -159,6 +188,13 @@
     }
     .project-card + .project-card{
       margin-top:20px !important;
+    }
+    .intro{
+      grid-row:span 2;
+    }
+    .writing{
+      grid-column:2;
+      margin-top:-24px;
     }
   }
 </style>
@@ -266,6 +302,22 @@
         build their own question bank, and browse questions posted by others.
       </p>
       <a class="project-link" href="https://examprep-fd5661.firebaseapp.com/" target="_blank" rel="noopener">View project →</a>
+    </div>
+  </section>
+
+  <section class="projects writing">
+    <h2>Writing</h2>
+    <div class="project-card">
+      <ul class="article-list">
+        <li>
+          <a href="https://medium.com/itwinjs/itwins-and-iot-a-powerful-duo-b4dc2ea540dc" target="_blank" rel="noopener">iTwins and IoT — A Powerful Duo</a>
+          <span class="article-meta">iTwin.js on Medium · Part 1 · Jan 31, 2023 · A reusable approach to bringing live IoT data into digital twins — device markers, heatmaps and real-time charts, on Azure or AWS.</span>
+        </li>
+        <li>
+          <a href="https://medium.com/itwinjs/itwins-and-iot-data-matters-d0e60797b6c0" target="_blank" rel="noopener">iTwins and IoT — Data Matters</a>
+          <span class="article-meta">iTwin.js on Medium · Part 2 · Mar 6, 2023 · How IoT data gets into a digital twin — synchronization, augmentation and federation of device metadata and live telemetry.</span>
+        </li>
+      </ul>
     </div>
   </section>
 </div>
